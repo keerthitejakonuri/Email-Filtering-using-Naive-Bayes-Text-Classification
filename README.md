@@ -19,4 +19,19 @@ In text classification, our goal is to find the best class for the document. The
 
                                           Cmap = argmax P(c/d) = argmax P(c) * MUL(term(k)/c)
                                           1 <= k <= no. of docs
-                                          
+                                       
+
+I first calculated the conditional probabilities: P(term(k)/c)
+
+Also, calculated the prior probabilities for each class: P(c)
+
+And, we decide whether the Class of new email based on which probablity is higher.
+
+Also, applied Laplace smoothing to avoid the product of conditional probablities being zero.
+
+Advantages:
+Naive Bayes is suitable for Text Classification.
+
+Dis-Advantages:
+Naive Bayes pays no attention to ordering or context (words occurring together can have quite different meanings from occurring singly).
+To avoid that we have to apply Sentiment Analysis.
